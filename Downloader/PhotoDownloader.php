@@ -26,7 +26,7 @@ class PhotoDownloader{
     }
       
    private static function check_new_file($old_image,$new_image){
-       if(md5_file($old_image)==md5_file($new_image)){
+       if((md5_file($old_image)==md5_file($new_image)) || filesize($old_image) == filesize($new_image)){
            return(0);
        }
        return(1);
