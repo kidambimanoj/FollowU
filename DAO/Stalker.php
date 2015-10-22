@@ -14,6 +14,8 @@ class Stalker{
          $stalkee_fb_id = '';
          $conn = db::connect_to_db();
          
+		 Sucks.
+		 
         if($conn){
             $result = $conn->query($sql1);
             if ($result->num_rows > 0) {
